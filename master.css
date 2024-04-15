@@ -1,23 +1,30 @@
+*{
+    box-sizing: border-box;
+}
 body {
     background-color: rgba(0, 0, 0, 0.618);
+    color: #eee;
+
 }
 
 ul {
     padding: 0;
     margin: 0;
-    background-color: #ddd;
+    background-color: #dddddd62;
     margin: 20px auto;
     padding: 20px;
-    width: 400px;
+    width: 700px;
     list-style: none;
     display: flex;
     justify-content: space-between;
     border-radius: 47%;
+    transform: scale(1.2);
+
 }
 
 ul li {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 25px;
     border-radius: 50%;
     border: 2px solid transparent;
     opacity: .8;
@@ -32,20 +39,15 @@ ul li {
 .container {
     display: flex;
     justify-content: space-between;
-    background-color: #ddd;
-    width: 500px;
+    background-color: #dddddd62;
+    width: 600px;
     height: 250px;
-    margin: 20px auto;
-
+    margin: 40px auto;
+    position: relative;
+    transform: scale(1.5);
+    border-radius: 20px;
 }
 
-.side {
-    color: #eee;
-    width: 210px;
-    margin-left: 15px;
-    padding: 10px;
-    background-color: rgba(255, 174, 0, 0.804);
-}
 
 .output {
     display: none;
@@ -54,23 +56,24 @@ ul li {
     width: 500px;
     height: 200px;
     background-color: rgba(255, 174, 0, 0.804);
-    margin: auto;
+    margin: 50px auto;
     color: #ddd;
     border-radius: 40px;
+
 }
 
 ul li.active {
     opacity: 1;
     background-color: rgba(255, 174, 0, 0.804);
+
 }
 
 
 .quiz {
-    position: relative;
     display: none;
     width: 450px;
-    height: 240px;
     padding-left: 30px;
+    padding-top: 10px
 }
 
 .active {
@@ -80,9 +83,9 @@ ul li.active {
 button {
     position: absolute;
     right: 30px;
-    bottom: 50px;
-    width: 80px;
-    height: 30px;
+    bottom: 20px;
+    width: 100px;
+    height: 40px;
     margin-top: 40px;
     float: right;
     background-color: rgba(255, 174, 0, 0.804);
@@ -108,6 +111,7 @@ label:hover {
 .wrong3:checked~.wrongl3 {
     color: red;
 }
+
 .wrong1:checked~.label,
 .wrong2:checked~.label,
 .wrong3:checked~.label {
@@ -120,3 +124,73 @@ label:hover {
 
 }
 
+@media(max-width:530px) {
+    .quiz {
+        width: 80%;
+        height: 300px;
+        padding-top: 10px;
+        transform: none;
+        font-size: 20px;
+    }
+
+    .container {
+        width: 90%;
+        height: 600px;
+        transform: none;
+margin: 10px auto;
+
+    }
+
+    ul {
+        width: 70%;
+        height: 40%;
+        transform: none;
+        margin: 0 auto;
+
+    }
+
+    input {
+        margin: 20px 0;
+    }
+
+    .output {
+        width: 80%;
+        padding: 10px;
+    }
+
+    ul li {
+        width: 30px;
+        height: 25px;
+        margin:0 2px;
+    }
+}
+
+@media(min-width:530px) {
+    .quiz {
+        width: 97%;
+        height: 300px;
+        padding-top: 10px;
+        font-size: 25px;
+
+    }
+
+    .container {
+        width: 80%;
+        height: 500px;
+        transform: none;
+
+    }
+
+    input {
+        margin: 20px;
+    }
+
+    .output {
+        width: 80%;
+        padding: 10px;
+    }
+    ul{
+        width: 60%;
+    }
+
+}
